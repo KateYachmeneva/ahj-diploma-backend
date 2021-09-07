@@ -1,0 +1,36 @@
+{
+  "name": "ahj-diploma-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "prestart": "npm install",
+    "start": "forever server.js",
+    "watch": "forever -w server.js",
+    "list": "forever list",
+    "stop": "forever stopall"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KateYachmeneva/ahj-diploma-backend.git"
+  },
+  "author": "KateYachmeneva",
+  "dependencies": {
+    "forever": "^3.0.4",
+    "koa": "^2.13.1",
+    "koa-body": "^4.2.0",
+    "koa-router": "^10.0.0",
+    "koa-static": "^5.0.0",
+    "koa2-cors": "^2.0.6",
+    "uuid": "^8.3.2",
+    "ws": "^7.4.6"
+  },
+  "engines": {
+    "node": "10.x"
+  },
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KateYachmeneva/ahj-diploma-backend/issues"
+  },
+  "homepage": "https://github.com/KateYachmeneva/ahj-diploma-backend#readme"
+}
