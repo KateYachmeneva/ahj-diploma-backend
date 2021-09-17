@@ -41,7 +41,7 @@ const server = http.createServer(app.callback());
 const wsServer = new WS.Server({ server });
 
 // DATABASE
-const dBase = [
+const dB = [
     {id: '123', message: 'Просто текст', date: Date.now() - 500000000, geo: '', type: 'text'},
     {id: '124', message: 'Feci quod potui faciant meliora potentes', date: Date.now() - 450000000, geo: '', type: 'text'},
     {id: '125', message: 'Т', date: Date.now() - 400000000, geo: '', type: 'text'},
@@ -80,7 +80,7 @@ const  favourites = new Set(['127', '29a86030-d83c-11eb-9a19-87bef25338c3', '125
 const clients = [];
 wsServer.on('connection', (ws) => {
     clients.push(ws);
-    const storage = new Storage(dBase,category,favourites,filesDir,ws,clients);
+    const storage = new Storage(dB,category,favourites,filesDir,ws,clients);
     storage.init();
 
 router.post('/upload', async (ctx) => {
