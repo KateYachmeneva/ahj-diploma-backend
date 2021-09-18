@@ -32,7 +32,7 @@ app.use(
   app.use(router.routes()).use(router.allowedMethods());
 
 //Files Directory organisation
-  const filesDir = path.join(__dirname, '/files');
+  const filesDir = path.join(__dirname, '/public');
   app.use(koaStatic(filesDir));
 
 // Starting Server
